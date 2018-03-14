@@ -11,6 +11,9 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    var dynamicAnimator: UIDynamicAnimator!
+    var dynamicItemBehaviour: UIDynamicItemBehavior!
 
     @IBOutlet weak var RoadA: UIImageView!
     @IBOutlet weak var CarView: DraggedImage!
@@ -22,10 +25,28 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
           super.viewDidLoad()
         
+        dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        
+        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView])
+        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 300), for: ObstacleView)
+        dynamicAnimator.addBehavior(dynamicItemBehaviour)
+        
+        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView1])
+        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 300), for: ObstacleView1)
+        dynamicAnimator.addBehavior(dynamicItemBehaviour)
+        
+        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView2])
+        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 300), for: ObstacleView2)
+        dynamicAnimator.addBehavior(dynamicItemBehaviour)
+        
+        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView3])
+        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 300), for: ObstacleView3)
+        dynamicAnimator.addBehavior(dynamicItemBehaviour)
+        
         self.view.addSubview(CarView)
         self.view.bringSubview(toFront: CarView)
         
-        let when = DispatchTime.now() + 2
+        let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.ObstacleView.isHidden = false
             self.ObstacleView1.isHidden = false
@@ -33,7 +54,6 @@ class GameViewController: UIViewController {
             self.ObstacleView3.isHidden = false
 
         }
-        
         
         var imagearray: [UIImage]
         
