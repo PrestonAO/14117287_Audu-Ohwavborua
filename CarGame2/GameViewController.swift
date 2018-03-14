@@ -14,13 +14,26 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var RoadA: UIImageView!
     @IBOutlet weak var CarView: DraggedImage!
+    @IBOutlet weak var ObstacleView: UIImageView!
+    @IBOutlet weak var ObstacleView1: UIImageView!
+    @IBOutlet weak var ObstacleView2: UIImageView!
+    @IBOutlet weak var ObstacleView3: UIImageView!
     
     override func viewDidLoad() {
+          super.viewDidLoad()
         
         self.view.addSubview(CarView)
         self.view.bringSubview(toFront: CarView)
         
-        super.viewDidLoad()
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.ObstacleView.isHidden = false
+            self.ObstacleView1.isHidden = false
+            self.ObstacleView2.isHidden = false
+            self.ObstacleView3.isHidden = false
+
+        }
+        
         
         var imagearray: [UIImage]
         
