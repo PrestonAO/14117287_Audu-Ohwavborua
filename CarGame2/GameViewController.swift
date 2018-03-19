@@ -24,42 +24,69 @@ class GameViewController: UIViewController {
     @IBOutlet weak var ObstacleView2: UIImageView!
     @IBOutlet weak var ObstacleView3: UIImageView!
     
+    let carImages = ["car3", "car6", "carp", "carx"]
+    let randomCarArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    
     override func viewDidLoad() {
           super.viewDidLoad()
         
         dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
-        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView])
-        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 100), for: ObstacleView)
-        dynamicAnimator.addBehavior(dynamicItemBehaviour)
-        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView1])
-        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 200), for: ObstacleView1)
-        dynamicAnimator.addBehavior(dynamicItemBehaviour)
-        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView2])
-        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 100), for: ObstacleView2)
-        dynamicAnimator.addBehavior(dynamicItemBehaviour)
-        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView3])
-        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 200), for: ObstacleView3)
-        dynamicAnimator.addBehavior(dynamicItemBehaviour)
-        
         gravityBehaviour = UIGravityBehavior(items: [ObstacleView, ObstacleView1, ObstacleView2, ObstacleView3])
         dynamicAnimator.addBehavior(gravityBehaviour)
         
         collisionBehaviour = UICollisionBehavior(items: [ObstacleView, ObstacleView1, ObstacleView2, ObstacleView3])
-        collisionBehaviour.translatesReferenceBoundsIntoBoundary = true
+        collisionBehaviour.translatesReferenceBoundsIntoBoundary = false
         dynamicAnimator.addBehavior(collisionBehaviour)
         
         self.view.addSubview(CarView)
         self.view.bringSubview(toFront: CarView)
         
-        let when = DispatchTime.now() + 0.5
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.ObstacleView.isHidden = false
-            self.ObstacleView1.isHidden = false
-            self.ObstacleView2.isHidden = false
-            self.ObstacleView3.isHidden = false
-
+        for index in 0...19 {
+            
+            let delay = Double(self.randomCarArray[index])
+            
+            let when = DispatchTime.now() + delay
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                
+                self.ObstacleView.isHidden = false
+                
+                let leftObstacle = arc4random_uniform(20)
+                let ObstacleView = UIImageView(image: nil)
+                let screenWidth = UIScreen.main.bounds.width
+                
+                switch leftObstacle {
+                case 1: ObstacleView.image = UIImage(named: "car3.png")
+                case 2: ObstacleView.image = UIImage(named: "carp.png")
+                case 3: ObstacleView.image = UIImage(named: "car6.png")
+                case 4: ObstacleView.image = UIImage(named: "carx.png")
+                    
+                default:
+                    ObstacleView.image = UIImage(named: "carx.png")
+                }
+                
+                ObstacleView.frame = CGRect(x: Int(arc4random_uniform(UInt32(screenWidth))), y: 0, width: 30, height: 50)
+                
+                self.view.addSubview(ObstacleView)
+                
+                self.dynamicItemBehaviour = UIDynamicItemBehavior(items: [ObstacleView])
+            self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 100), for: ObstacleView)
+            self.dynamicAnimator.addBehavior(self.dynamicItemBehaviour)
+             
+                
+                
+            }
+            
         }
+        
+        
+        
+        
+        
+            
+
+      
+        
         
         var imagearray: [UIImage]
         

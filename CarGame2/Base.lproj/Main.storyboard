@@ -18,28 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car0.png" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-Vb-pMl" customClass="DraggedImage" customModule="CarGame2" customModuleProvider="target">
-                                <rect key="frame" x="57" y="687" width="40" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-rk-Nps">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftt-LP-W7p">
-                                <rect key="frame" x="57" y="45" width="40" height="65"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car0.png" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-Vb-pMl" customClass="DraggedImage" customModule="CarGame2" customModuleProvider="target">
+                                <rect key="frame" x="151" y="713" width="40" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carx.png" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-RW-vJ5">
-                                <rect key="frame" x="279" y="475" width="40" height="65"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car3.png" translatesAutoresizingMaskIntoConstraints="NO" id="G8b-W2-pME">
+                                <rect key="frame" x="57" y="44" width="40" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carp.png" translatesAutoresizingMaskIntoConstraints="NO" id="kWo-ie-NvL">
-                                <rect key="frame" x="206" y="137" width="40" height="65"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftt-LP-W7p">
+                                <rect key="frame" x="105" y="44" width="40" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car6.png" translatesAutoresizingMaskIntoConstraints="NO" id="G8b-W2-pME">
-                                <rect key="frame" x="98" y="374" width="40" height="65"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWo-ie-NvL">
+                                <rect key="frame" x="213" y="44" width="40" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-RW-vJ5">
+                                <rect key="frame" x="261" y="45" width="40" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -63,8 +63,5 @@
     <resources>
         <image name="car0.png" width="382" height="757"/>
         <image name="car3.png" width="397" height="800"/>
-        <image name="car6.png" width="595" height="1200"/>
-        <image name="carp.png" width="125" height="250"/>
-        <image name="carx.png" width="294" height="664"/>
     </resources>
 </document>
