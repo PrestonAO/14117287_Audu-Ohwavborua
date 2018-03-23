@@ -18,28 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-rk-Nps">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car0.png" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-Vb-pMl" customClass="DraggedImage" customModule="CarGame2" customModuleProvider="target">
                                 <rect key="frame" x="151" y="713" width="40" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car3.png" translatesAutoresizingMaskIntoConstraints="NO" id="G8b-W2-pME">
-                                <rect key="frame" x="57" y="44" width="40" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftt-LP-W7p">
-                                <rect key="frame" x="105" y="44" width="40" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWo-ie-NvL">
-                                <rect key="frame" x="213" y="44" width="40" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-RW-vJ5">
-                                <rect key="frame" x="261" y="45" width="40" height="65"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-rk-Nps">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -48,10 +32,6 @@
                     </view>
                     <connections>
                         <outlet property="CarView" destination="euZ-Vb-pMl" id="Jda-2y-yt3"/>
-                        <outlet property="ObstacleView" destination="G8b-W2-pME" id="laf-Dh-IQ6"/>
-                        <outlet property="ObstacleView1" destination="ftt-LP-W7p" id="iaG-Cq-89d"/>
-                        <outlet property="ObstacleView2" destination="kWo-ie-NvL" id="OML-nk-5tI"/>
-                        <outlet property="ObstacleView3" destination="0kf-RW-vJ5" id="toT-yD-4as"/>
                         <outlet property="RoadA" destination="keZ-rk-Nps" id="xOF-8l-Est"/>
                     </connections>
                 </viewController>
@@ -62,6 +42,5 @@
     </scenes>
     <resources>
         <image name="car0.png" width="382" height="757"/>
-        <image name="car3.png" width="397" height="800"/>
     </resources>
 </document>

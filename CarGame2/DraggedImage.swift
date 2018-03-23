@@ -11,6 +11,7 @@ import UIKit
 class DraggedImage: UIImageView {
     
     var startLocation: CGPoint?
+    var myDelegate: subviewDelegate?
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -26,6 +27,8 @@ class DraggedImage: UIImageView {
         let dy = currentLocation!.y - startLocation!.y
         
         self.center = CGPoint(x: self.center.x+dx, y: self.center.y+dy)
+        
+        self.myDelegate?.changeSomething()
         
     }
 
