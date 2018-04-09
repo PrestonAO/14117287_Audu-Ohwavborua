@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E6CF28D206B81570093C663 /* game_over.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CF28B206B81570093C663 /* game_over.jpg */; };
+		7E6CF28E206B81570093C663 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CF28C206B81570093C663 /* replay.png */; };
 		7EC9EDD1206553900021FDE1 /* carx.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC9EDCF2065538F0021FDE1 /* carx.png */; };
 		7EC9EDD2206553900021FDE1 /* carp.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC9EDD02065538F0021FDE1 /* carp.png */; };
 		7EC9EDD6206553D90021FDE1 /* car0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC9EDD3206553D90021FDE1 /* car0.png */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E6CF28B206B81570093C663 /* game_over.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = game_over.jpg; sourceTree = "<group>"; };
+		7E6CF28C206B81570093C663 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = "<group>"; };
 		7EC9EDCF2065538F0021FDE1 /* carx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carx.png; sourceTree = "<group>"; };
 		7EC9EDD02065538F0021FDE1 /* carp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carp.png; sourceTree = "<group>"; };
 		7EC9EDD3206553D90021FDE1 /* car0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car0.png; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				7EC9EDE5206554120021FDE1 /* road4.png */,
 				7EC9EDE6206554120021FDE1 /* road5.png */,
 				7EC9EDDB206554110021FDE1 /* road6.png */,
+				7E6CF28B206B81570093C663 /* game_over.jpg */,
+				7E6CF28C206B81570093C663 /* replay.png */,
 				7EC9EDE7206554120021FDE1 /* road7.png */,
 				7EC9EDEB206554120021FDE1 /* road8.png */,
 				7EC9EDDC206554110021FDE1 /* road9.png */,
@@ -275,7 +281,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Preston Audu";
 				TargetAttributes = {
 					7EE3B1BD205792AB00D886D1 = {
@@ -329,6 +335,7 @@
 				7EE3B1CD205792AB00D886D1 /* Main.storyboard in Resources */,
 				7EC9EDF5206554120021FDE1 /* road14.png in Resources */,
 				7EC9EDF0206554120021FDE1 /* road9.png in Resources */,
+				7E6CF28E206B81570093C663 /* replay.png in Resources */,
 				7EE3B1C4205792AB00D886D1 /* GameScene.sks in Resources */,
 				7EC9EDF9206554120021FDE1 /* road4.png in Resources */,
 				7EC9EDFD206554120021FDE1 /* road19.png in Resources */,
@@ -338,6 +345,7 @@
 				7EC9EDF6206554120021FDE1 /* road17.png in Resources */,
 				7EE3B1D2205792AB00D886D1 /* LaunchScreen.storyboard in Resources */,
 				7EC9EDF8206554120021FDE1 /* road1.png in Resources */,
+				7E6CF28D206B81570093C663 /* game_over.jpg in Resources */,
 				7EC9EDFA206554120021FDE1 /* road5.png in Resources */,
 				7EC9EDFF206554120021FDE1 /* road8.png in Resources */,
 				7EC9EDF3206554120021FDE1 /* road3.png in Resources */,
@@ -445,6 +453,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -452,6 +461,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -502,6 +512,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -509,6 +520,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
