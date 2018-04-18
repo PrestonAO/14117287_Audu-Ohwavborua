@@ -16,10 +16,16 @@ protocol subviewDelegate {
 
 class GameViewController: UIViewController, subviewDelegate {
     
+    @IBOutlet weak var GameScore: UILabel!
     var carAnimator: UIDynamicAnimator!
     var dynamicItemBehaviour: UIDynamicItemBehavior!
     var gravityBehaviour: UIGravityBehavior!
     var collisionBehaviour: UICollisionBehavior!
+    var Score = 0;
+    var ScoreArray: [UIImageView] = []
+    var gameCars: [UIImageView] = []
+    let GameOver = UIImageView(image: nil)
+    let Rbutton = UIButton(frame: CGRect(x: 150, y: 80, width: 100, height: 150))
     
     let randomCarArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     
@@ -27,14 +33,30 @@ class GameViewController: UIViewController, subviewDelegate {
     @IBOutlet weak var CarView: DraggedImage!
     
     
+    @objc func restart (sender: UIButton!) {
+        GameScore.removeFromSuperview()
+        Rbutton.removeFromSuperview()
+        Score = 0;
+        
+        for i in gameCars {
+            i.removeFromSuperview()
+        }
+    }
+    
+    
     func changeSomething()
     {
         collisionBehaviour.removeAllBoundaries()
         collisionBehaviour.addBoundary(withIdentifier: "playercar" as
             NSCopying, for: UIBezierPath(rect: CarView.frame))
+        
+        for usercar in ScoreArray {
+            if(CarView.frame.intersects(usercar.frame)) {
+                Score = Score - 2
+                self.GameScore.text = String(self.Score)
+            }
+        }
     }
-    
-    
     
     override func viewDidLoad() {
           super.viewDidLoad()
@@ -59,7 +81,7 @@ class GameViewController: UIViewController, subviewDelegate {
             
         DispatchQueue.main.asyncAfter(deadline: when) {
             
-            let Obstacle = arc4random_uniform(5)
+            let Obstacle = arc4random_uniform(6)
             let ObstacleView = UIImageView(image: nil)
             let screenWidth = UIScreen.main.bounds.width
                 
@@ -68,9 +90,9 @@ class GameViewController: UIViewController, subviewDelegate {
                 case 2: ObstacleView.image = UIImage(named: "carp.png")
                 case 3: ObstacleView.image = UIImage(named: "car6.png")
                 case 4: ObstacleView.image = UIImage(named: "carx.png")
-                case 5: ObstacleView.image = UIImage(named: "redcar.png")
+                
                 default:
-                    ObstacleView.image = UIImage(named: "carx.png")
+                    ObstacleView.image = UIImage(named: "car3.png")
                 }
                 
                 ObstacleView.frame = CGRect(x: Int(arc4random_uniform(UInt32(screenWidth))), y: 0, width: 40, height:65 )
@@ -81,6 +103,10 @@ class GameViewController: UIViewController, subviewDelegate {
             self.dynamicItemBehaviour.addItem(ObstacleView)
             self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: 0, y: 300), for: ObstacleView)
             self.collisionBehaviour.addItem(ObstacleView)
+            
+            self.ScoreArray.append((ObstacleView))
+            self.Score += 2
+            self.GameScore.text = String(self.Score)
             }
         }
         
