@@ -21,7 +21,7 @@ class GameViewController: UIViewController, subviewDelegate {
     var gravityBehaviour: UIGravityBehavior!
     var collisionBehaviour: UICollisionBehavior!
     
-    let randomCarArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+    let randomCarArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     
     @IBOutlet weak var RoadA: UIImageView!
     @IBOutlet weak var CarView: DraggedImage!
@@ -29,7 +29,7 @@ class GameViewController: UIViewController, subviewDelegate {
     
     func changeSomething()
     {
-
+        collisionBehaviour.removeAllBoundaries()
         collisionBehaviour.addBoundary(withIdentifier: "playercar" as
             NSCopying, for: UIBezierPath(rect: CarView.frame))
     }
@@ -51,7 +51,7 @@ class GameViewController: UIViewController, subviewDelegate {
         
         
         
-        for index in 0...29 {
+        for index in 0...19 {
             
             let delay = Double(self.randomCarArray[index])
             
@@ -59,7 +59,7 @@ class GameViewController: UIViewController, subviewDelegate {
             
         DispatchQueue.main.asyncAfter(deadline: when) {
             
-            let Obstacle = arc4random_uniform(20)
+            let Obstacle = arc4random_uniform(5)
             let ObstacleView = UIImageView(image: nil)
             let screenWidth = UIScreen.main.bounds.width
                 
@@ -68,6 +68,7 @@ class GameViewController: UIViewController, subviewDelegate {
                 case 2: ObstacleView.image = UIImage(named: "carp.png")
                 case 3: ObstacleView.image = UIImage(named: "car6.png")
                 case 4: ObstacleView.image = UIImage(named: "carx.png")
+                case 5: ObstacleView.image = UIImage(named: "redcar.png")
                 default:
                     ObstacleView.image = UIImage(named: "carx.png")
                 }
@@ -88,6 +89,11 @@ class GameViewController: UIViewController, subviewDelegate {
         collisionBehaviour.translatesReferenceBoundsIntoBoundary = false
         carAnimator.addBehavior(collisionBehaviour)
         
+        var imagearray: [UIImage]
+         imagearray = [UIImage(named: "road1.png")!,UIImage(named: "road2.png")!,UIImage(named: "road3.png")!,UIImage(named: "road4.png")!,UIImage(named: "road5.png")!,UIImage(named: "road6.png")!,UIImage(named: "road7.png")!,UIImage(named: "road8.png")!,UIImage(named: "road9.png")!,UIImage(named: "road10.png")!,UIImage(named: "road11.png")!,UIImage(named: "road12.png")!,UIImage(named: "road13.png")!,UIImage(named: "road14.png")!,UIImage(named: "road15.png")!,UIImage(named: "road16.png")!,UIImage(named: "road17.png")!,UIImage(named: "road18.png")!,UIImage(named: "road19.png")!,UIImage(named: "road20.png")!]
+        
+        RoadA.image = UIImage.animatedImage(with: imagearray, duration: 0.2)
+        
         let endGame = DispatchTime.now() + 20
         DispatchQueue.main.asyncAfter(deadline: endGame) {
             
@@ -97,11 +103,6 @@ class GameViewController: UIViewController, subviewDelegate {
             self.view.bringSubview(toFront: GameOver)
             
         }
-        
-        var imagearray: [UIImage]
-         imagearray = [UIImage(named: "road1.png")!,UIImage(named: "road2.png")!,UIImage(named: "road3.png")!,UIImage(named: "road4.png")!,UIImage(named: "road5.png")!,UIImage(named: "road6.png")!,UIImage(named: "road7.png")!,UIImage(named: "road8.png")!,UIImage(named: "road9.png")!,UIImage(named: "road10.png")!,UIImage(named: "road11.png")!,UIImage(named: "road12.png")!,UIImage(named: "road13.png")!,UIImage(named: "road14.png")!,UIImage(named: "road15.png")!,UIImage(named: "road16.png")!,UIImage(named: "road17.png")!,UIImage(named: "road18.png")!,UIImage(named: "road19.png")!,UIImage(named: "road20.png")!]
-        
-        RoadA.image = UIImage.animatedImage(with: imagearray, duration: 0.2)
     }
     
 

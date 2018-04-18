@@ -67,6 +67,7 @@
 /* Begin PBXFileReference section */
 		7E6CF28B206B81570093C663 /* game_over.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = game_over.jpg; sourceTree = "<group>"; };
 		7E6CF28C206B81570093C663 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = "<group>"; };
+		7E8C248E2087B45900F054B1 /* redcar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redcar.png; path = /Users/prestonaudu/Desktop/Xcode/CarGame2/CarGame2/redcar.png; sourceTree = "<absolute>"; };
 		7EC9EDCF2065538F0021FDE1 /* carx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carx.png; sourceTree = "<group>"; };
 		7EC9EDD02065538F0021FDE1 /* carp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carp.png; sourceTree = "<group>"; };
 		7EC9EDD3206553D90021FDE1 /* car0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car0.png; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 				7EE3B1C7205792AB00D886D1 /* GameScene.swift */,
 				7EE3B1C9205792AB00D886D1 /* GameViewController.swift */,
 				7EE3B221205798DD00D886D1 /* DraggedImage.swift */,
+				7E8C248E2087B45900F054B1 /* redcar.png */,
 				7EC9EDE4206554120021FDE1 /* road1.png */,
 				7EC9EDD9206554110021FDE1 /* road2.png */,
 				7EC9EDDF206554110021FDE1 /* road3.png */,
