@@ -36,6 +36,8 @@
 		7EC9EDFE206554120021FDE1 /* road16.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC9EDEA206554120021FDE1 /* road16.png */; };
 		7EC9EDFF206554120021FDE1 /* road8.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC9EDEB206554120021FDE1 /* road8.png */; };
 		7EC9EE00206554120021FDE1 /* road13.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC9EDEC206554120021FDE1 /* road13.png */; };
+		7ECAB38C208A1F15004AE747 /* redcar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ECAB38B208A1F15004AE747 /* redcar.png */; };
+		7ECAB38E208A22AF004AE747 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ECAB38D208A22AF004AE747 /* start.png */; };
 		7EE3B1C2205792AB00D886D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1C1205792AB00D886D1 /* AppDelegate.swift */; };
 		7EE3B1C4205792AB00D886D1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3B1C3205792AB00D886D1 /* GameScene.sks */; };
 		7EE3B1C6205792AB00D886D1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3B1C5205792AB00D886D1 /* Actions.sks */; };
@@ -69,7 +71,6 @@
 /* Begin PBXFileReference section */
 		7E6CF28B206B81570093C663 /* game_over.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = game_over.jpg; sourceTree = "<group>"; };
 		7E6CF28C206B81570093C663 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = "<group>"; };
-		7E8C248E2087B45900F054B1 /* redcar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redcar.png; path = /Users/prestonaudu/Desktop/Xcode/CarGame2/CarGame2/redcar.png; sourceTree = "<absolute>"; };
 		7EC6BB8F2089C90900F851DF /* startpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startpage.jpg; sourceTree = "<group>"; };
 		7EC6BB91208A0F7300F851DF /* gameMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic.mp3; sourceTree = "<group>"; };
 		7EC9EDCF2065538F0021FDE1 /* carx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carx.png; sourceTree = "<group>"; };
@@ -97,6 +98,8 @@
 		7EC9EDEA206554120021FDE1 /* road16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = road16.png; sourceTree = "<group>"; };
 		7EC9EDEB206554120021FDE1 /* road8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = road8.png; sourceTree = "<group>"; };
 		7EC9EDEC206554120021FDE1 /* road13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = road13.png; sourceTree = "<group>"; };
+		7ECAB38B208A1F15004AE747 /* redcar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redcar.png; sourceTree = "<group>"; };
+		7ECAB38D208A22AF004AE747 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		7EE3B1BE205792AB00D886D1 /* CarGame2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGame2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE3B1C1205792AB00D886D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE3B1C3205792AB00D886D1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				7EE3B1CB205792AB00D886D1 /* Main.storyboard */,
+				7ECAB38D208A22AF004AE747 /* start.png */,
 				7EC6BB8F2089C90900F851DF /* startpage.jpg */,
 				7EE3B1C1205792AB00D886D1 /* AppDelegate.swift */,
 				7EE3B1C3205792AB00D886D1 /* GameScene.sks */,
@@ -173,7 +177,7 @@
 				7EE3B1C9205792AB00D886D1 /* GameViewController.swift */,
 				7EC6BB91208A0F7300F851DF /* gameMusic.mp3 */,
 				7EE3B221205798DD00D886D1 /* DraggedImage.swift */,
-				7E8C248E2087B45900F054B1 /* redcar.png */,
+				7ECAB38B208A1F15004AE747 /* redcar.png */,
 				7EC9EDE4206554120021FDE1 /* road1.png */,
 				7EC9EDD9206554110021FDE1 /* road2.png */,
 				7EC9EDDF206554110021FDE1 /* road3.png */,
@@ -343,6 +347,8 @@
 				7EE3B1CD205792AB00D886D1 /* Main.storyboard in Resources */,
 				7EC9EDF5206554120021FDE1 /* road14.png in Resources */,
 				7EC9EDF0206554120021FDE1 /* road9.png in Resources */,
+				7ECAB38E208A22AF004AE747 /* start.png in Resources */,
+				7ECAB38C208A1F15004AE747 /* redcar.png in Resources */,
 				7E6CF28E206B81570093C663 /* replay.png in Resources */,
 				7EE3B1C4205792AB00D886D1 /* GameScene.sks in Resources */,
 				7EC9EDF9206554120021FDE1 /* road4.png in Resources */,
