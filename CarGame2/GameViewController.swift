@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import AVFoundation
 protocol subviewDelegate {
     
     func changeSomething()
@@ -25,6 +26,7 @@ class GameViewController: UIViewController, subviewDelegate {
     var Score = 0;
     var ScoreArray: [UIImageView] = []
     var gameCars: [UIImageView] = []
+    var GameBackSong: AVAudioPlayer?
     let GameOver = UIImageView(image: nil)
     
     let randomCarArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
@@ -33,13 +35,10 @@ class GameViewController: UIViewController, subviewDelegate {
     @IBOutlet weak var CarView: DraggedImage!
     
     @IBAction func replayB(_ sender: Any) {
-        viewDidLoad()
-        
         GameScore.text = ""
         Score = 0;
         GameOver.isHidden = true
         restartB.isHidden = true
-        
         
         for i in gameCars {
             i.removeFromSuperview()
@@ -116,6 +115,13 @@ class GameViewController: UIViewController, subviewDelegate {
             }
         }
         
+        let path = Bundle.main.path(forResource: "gameMusic.mp3", ofType:nil)!; let url = URL.init(fileURLWithPath: path)
+        do {
+            GameBackSong = try AVAudioPlayer(contentsOf: url); GameBackSong?.play()
+        } catch {
+
+        }
+        
         carAnimator.addBehavior(dynamicItemBehaviour)
         collisionBehaviour = UICollisionBehavior(items: [])
         collisionBehaviour.translatesReferenceBoundsIntoBoundary = false
@@ -131,7 +137,6 @@ class GameViewController: UIViewController, subviewDelegate {
             self.view.addSubview(self.GameOver)
             self.view.bringSubview(toFront: self.GameOver)
             self.view.bringSubview(toFront: self.restartB)
-            
         }
     }
     
